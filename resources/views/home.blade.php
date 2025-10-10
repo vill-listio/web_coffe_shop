@@ -10,7 +10,7 @@
 
                 <div class="col-md-8 col-sm-12 text-center ftco-animate">
                     <span class="subheading">Welcome</span>
-                    <h1 class="mb-4">Every Cup Has a Story.</h1>
+                    <h1 class="mb-4">A Perfect Blend of Coffee and Comfort.</h1>
                     <p class="mb-4 mb-md-5">Dari aroma pertama hingga tegukan terakhir, setiap kopi punya cerita dan
                         ceritamu dimulai di sini.</p>
                     <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
@@ -47,7 +47,7 @@
                 <div class="col-md-8 col-sm-12 text-center ftco-animate">
                     <span class="subheading">Welcome</span>
                     <h1 class="mb-4">Brewed for Great Vibes.</h1>
-                    <p class="mb-4 mb-md-5">Kopi segar, musik asik, dan teman terbaik arena hari baik dimulai dari
+                    <p class="mb-4 mb-md-5">Kopi segar, musik asik, dan teman terbaik karena hari baik dimulai dari
                         suasana yang menyenangkan.</p>
                     <p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a> <a href="#"
                             class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a></p>
@@ -90,7 +90,7 @@
                         <div class="icon"><span class="icon-clock-o"></span></div>
                         <div class="text">
                             <h3>Jam Buka</h3>
-                            <p>Setiap Hari: 08.00 – 22.00 WIB</p>
+                            <p>Setiap Hari: 09.00 – 22.00 WIB</p>
                         </div>
                     </div>
                 </div>
@@ -176,12 +176,11 @@
                 <h2 class="mb-4">Our Story</h2>
             </div>
             <div>
-                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would
-                    have been rewritten a thousand times and everything that was left from its origin would be the word
-                    "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing
-                    the copy said could convince her and so it didn’t take long until a few insidious Copy Writers
-                    ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they
-                    abused her for their.</p>
+                <p>My Coffee lahir dari semangat untuk menghadirkan pengalaman menikmati kopi yang istimewa.
+                    Kami memilih biji kopi terbaik dari berbagai daerah, diseduh dengan teknik yang penuh presisi, dan
+                    disajikan dalam suasana yang nyaman dan elegan. Setiap cangkir yang kami hidangkan mencerminkan
+                    dedikasi, cita rasa, dan kehangatan karena bagi kami, kopi bukan sekadar minuman, tapi pengalaman.
+                    Karena setiap tegukan punya cerita.</p>
             </div>
         </div>
     </div>
@@ -197,8 +196,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Easy to Order</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <p>Pesan kopi favoritmu hanya dengan beberapa klik cepat dan tanpa ribet.</p>
                     </div>
                 </div>
             </div>
@@ -209,8 +207,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Fastest Delivery</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <p>Kami pastikan pesananmu tiba hangat dan tepat waktu ke tempatmu.</p>
                     </div>
                 </div>
             </div>
@@ -221,8 +218,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Quality Coffee</h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic.</p>
+                        <p>Dibuat dari biji pilihan dengan cita rasa premium untuk hari yang lebih baik.</p>
                     </div>
                 </div>
             </div>
@@ -237,9 +233,8 @@
                 <div class="heading-section text-md-right ftco-animate">
                     <span class="subheading">Discover</span>
                     <h2 class="mb-4">Our Menu</h2>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and
-                        Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
-                        coast of the Semantics, a large language ocean.</p>
+                    <p class="mb-4">Setiap cangkir punya cerita. Kami sajikan kopi terbaik dengan cita rasa khas dan
+                        suasana yang tenang untuk setiap momen istimewa.</p>
                     <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
                 </div>
             </div>
@@ -282,7 +277,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="100">0</strong>
+                                <strong class="number" data-number="0">0</strong>
                                 <span>Coffee Branches</span>
                             </div>
                         </div>
@@ -291,7 +286,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="85">0</strong>
+                                <strong class="number" data-number="0">0</strong>
                                 <span>Number of Awards</span>
                             </div>
                         </div>
@@ -300,7 +295,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="10567">0</strong>
+                                <strong class="number" data-number="6">0</strong>
                                 <span>Happy Customer</span>
                             </div>
                         </div>
@@ -309,7 +304,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="900">0</strong>
+                                <strong class="number" data-number="5">0</strong>
                                 <span>Staff</span>
                             </div>
                         </div>
@@ -326,8 +321,8 @@
             <div class="col-md-7 heading-section ftco-animate text-center">
                 <span class="subheading">Discover</span>
                 <h2 class="mb-4">Best Coffee Sellers</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                    the blind texts.</p>
+                <p>Setiap tegukan punya cerita, dan setiap gigitan menyimpan kehangatan.
+                    Nikmati menu pilihan yang jadi favorit para pecinta kopi kami.</p>
             </div>
         </div>
         <div class="row">
@@ -401,9 +396,9 @@
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
                 <span class="subheading">Testimony</span>
-                <h2 class="mb-4">Customers Says</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                    the blind texts.</p>
+                <h2 class="mb-4">Kata Mereka</h2>
+                <p>Kami percaya rasa enak bukan cuma dari kopi, tapi juga dari pengalaman yang kamu rasakan di setiap
+                    kunjungan. Ini kata mereka yang udah nyobain langsung.</p>
             </div>
         </div>
     </div>
