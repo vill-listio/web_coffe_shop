@@ -26,14 +26,24 @@ class ProductsController extends Controller
         ->orderBy('id', 'desc')
         ->get();
 
-
+        if(isset(Auth::user()->id)){
+        
+        
         //check for product in cart
         
         $checkingInCart = Cart::where('pro_id', $id)
         ->where('user_id', Auth::user()->id)
         ->count();
 
-        return view('products.productsingle', compact('product', 'relatedProducts', 'checkingInCart'));
+            return view('products.productsingle', compact('product', 'relatedProducts', 'checkingInCart'));
+
+        } else {
+            
+            return view('products.productsingle', compact('product', 'relatedProducts'));
+
+        }
+        
+
     }
 
     public function addCart(Request $request, $id) {
@@ -99,7 +109,7 @@ class ProductsController extends Controller
         
 
         
-            return view('products.checkout');
+        return view('products.checkout');
 
 
     }
