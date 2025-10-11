@@ -48,6 +48,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    <div class="container">
 	      <a class="navbar-brand" href="{{ url('/') }}">Coffee<small>Blend</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,6 +66,8 @@
 	            <li class="nav-item cart"><a href="{{ route('cart') }}" class="nav-link"><span class="icon icon-shopping_cart"></span></a>
             @endif
 =======
+=======
+>>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">My<small>Coffee</small></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
@@ -77,6 +80,9 @@
                         <li class="nav-item"><a href="{{ route('products.menu') }}" class="nav-link">Menu</a></li>
                         <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+<<<<<<< HEAD
+>>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
+=======
 >>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
 
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -107,6 +113,7 @@
                                 </a>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
                                     <a class="dropdown-item" href="{{ route('users.orders') }}">
@@ -128,12 +135,17 @@
                             </li>
                     @endguest
 =======
+=======
+>>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </div>
                         </li>
                         @endguest
+<<<<<<< HEAD
+>>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
+=======
 >>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
 
 
