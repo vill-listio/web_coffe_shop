@@ -414,8 +414,8 @@
                         <div class="image mr-3 align-self-center">
                             <img src="images/person_1.jpg" alt="">
                         </div>
-                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
-                                Designer</span></div>
+                        <div class="name align-self-center">Imron Sulistio<span class="position">Mahasiswa
+                            </span></div>
                     </div>
                 </div>
             </div>
