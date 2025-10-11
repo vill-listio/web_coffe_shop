@@ -476,8 +476,7 @@
             <div class="col-lg align-self-sm-end ftco-animate">
                 <div class="testimony">
                     <blockquote>
-                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic life One day however a small line of blind text by the name. &rdquo;</p>
+                        <p>&ldquo;kopijo. &rdquo;</p>
                     </blockquote>
                     <div class="author d-flex mt-4">
                         <div class="image mr-3 align-self-center">
