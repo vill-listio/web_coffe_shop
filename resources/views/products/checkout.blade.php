@@ -31,12 +31,18 @@
 	                	<label for="firstname">Firt Name</label>
 	                  <input type="text" name="first_name" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('first_name'))
+								<p class="alert alert-success">{{ $errors->first('first_name') }}</p>
+							@endif
 	              </div>
 	              <div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="lastname">Last Name</label>
 	                  <input type="text" name="last_name" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('last_name'))
+								<p class="alert alert-success">{{ $errors->first('last_name') }}</p>
+							@endif
                 </div>
                 <div class="w-100"></div>
 		            <div class="col-md-12">
@@ -62,6 +68,9 @@
 	                	<label for="streetaddress">Street Address</label>
 	                  <textarea name="address" cols="10" rows="10" class="form-control" placeholder="House number and street name"></textarea>
 	                </div>
+							@if($errors->has('address'))
+								<p class="alert alert-success">{{ $errors->first('address') }}</p>
+							@endif
 		            </div>
 		            <!-- <div class="col-md-12">
 		            	<div class="form-group">
@@ -74,12 +83,18 @@
 	                	<label for="towncity">Town / City</label>
 	                  <input name="city" type="text" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('city'))
+								<p class="alert alert-success">{{ $errors->first('city') }}</p>
+							@endif
 		            </div>
 		            <div class="col-md-6">
 		            	<div class="form-group">
 		            		<label for="postcodezip">Postcode / ZIP *</label>
 	                  <input name="zip_code" type="text" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('zip_code'))
+								<p class="alert alert-success">{{ $errors->first('zip_code') }}</p>
+							@endif
 		            </div>
 		            <div class="w-100"></div>
 		            <div class="col-md-6">
@@ -87,12 +102,18 @@
 	                	<label for="phone">Phone</label>
 	                  <input name="phone" type="text" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('phone'))
+								<p class="alert alert-success">{{ $errors->first('phone') }}</p>
+							@endif
 	              </div>
 	              <div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="emailaddress">Email Address</label>
 	                  <input name="email" type="text" class="form-control" placeholder="">
 	                </div>
+							@if($errors->has('email'))
+								<p class="alert alert-success">{{ $errors->first('email') }}</p>
+							@endif
                 </div>
                 <div class="col-md-6">
 	                <div class="form-group">

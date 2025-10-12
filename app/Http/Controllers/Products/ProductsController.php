@@ -116,6 +116,17 @@ class ProductsController extends Controller
 
      public function storeCheckout(Request $request) {
 
+        Request()->validate([
+            "first_name" => "required|max:40",
+            "last_name" => "required|max:40",
+            "address" => "required",
+            "city" => "required",
+            "zip_code" => "required|max:40",
+            "phone" => "required",
+            "email" => "required",
+            "price" => "required",
+        ]);
+
         $checkout = Order::create($request->all());
 
         if($checkout) {
