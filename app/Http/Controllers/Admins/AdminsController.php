@@ -10,7 +10,7 @@ use App\Models\Product\Order;
 use App\Models\Admin\Admin;
 use Illuminate\Support\Facades\Hash;
 use Redirect;
-
+use File;
 
 
 class AdminsController extends Controller
@@ -104,5 +104,179 @@ class AdminsController extends Controller
 
         return view('admins.allorders', compact('allOrders'));
     }
+
+
+    public function editOrders($id) {
+
+        $order = Order::find($id);
+        
+
+        return view('admins.editorders', compact('order'));
+    }
     
+    
+    public function UpdateOrders(Request $request, $id) {
+
+        $order = Order::find($id);
+
+        $order->update($request->all());
+
+        if($order) {
+
+            return Redirect::route('all.orders')->with( ['update' => "order status updated succesffully"] );
+
+        }
+        
+
+    }
+
+
+    public function deleteOrders($id) {
+
+        $order = Order::find($id);
+
+        $order->delete();
+
+        if($order) {
+
+            return Redirect::route('all.orders')->with( ['delete' => "order deleted succesffully"] );
+
+        }
+        
+
+    }
+
+
+    public function displayProducts() {
+
+        $products = Product::select()->orderBy('id', 'desc')->get();
+
+        
+        return view('admins.allproducts', compact('products'));
+        
+        
+    }
+
+
+    public function createProducts() {
+
+        
+
+        
+        return view('admins.createproducts');
+        
+        
+    }
+
+
+    public function storeProducts(Request $request) {
+
+        // Request()->validate([
+        //     "name" => "required|max:40",
+        //     "email" => "required|max:40",
+        //     "password" => "required|max:40",
+           
+        // ]);
+
+
+        $destinationPath = 'assets/images/';
+        $myimage = $request->image->getClientOriginalName();
+        $request->image->move(public_path($destinationPath), $myimage);
+
+
+        $storeProducts = Product::Create([
+            "name" => $request->name,
+            "price" => $request->price,
+            "image" => $myimage,
+            "description" => $request->description,
+            "type" => $request->type,
+        ]);
+
+        if($storeProducts) {
+            return Redirect::route('all.products')->with( ['success' => "product created succesffully"] );
+
+        }
+        
+
+    }
+
+    public function deleteProducts($id) {
+
+
+        $product = Product::find($id);
+
+         if(File::exists(public_path('assets/images/' . $product->image))){
+            File::delete(public_path('assets/images/' . $product->image));
+        }else{
+            //dd('File does not exists.');
+        }
+
+        $product->delete();
+
+        
+        if($product) {
+            return Redirect::route('all.products')->with( ['delete' => "product deleted succesffully"] );
+
+        }        
+        
+    }
+
+    
+
+    public function displayBookings() {
+
+        $bookings = Booking::select()->orderBy('id', 'desc')->get();
+
+        
+        return view('admins.allbookings', compact('bookings'));
+        
+        
+    }
+    
+    public function editBooking($id) {
+
+        $booking = Booking::find($id);
+        
+
+        return view('admins.editbooking', compact('booking'));
+    }
+
+
+
+    public function UpdateBooking(Request $request, $id) {
+
+        $booking = Booking::find($id);
+
+        $booking->update($request->all());
+
+
+
+        if($booking) {
+
+            return Redirect::route('all.bookings')->with( ['update' => "booking status updated succesffully"] );
+
+        }
+        
+
+    }
+
+    public function deleteBooking($id) {
+
+
+        $booking = Booking::find($id);
+
+        
+
+        $booking->delete();
+
+        
+        if($booking) {
+            return Redirect::route('all.bookings')->with( ['delete' => "booking deleted succesffully"] );
+
+        }        
+        
+    }
+    
+
+
 }

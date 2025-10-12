@@ -6,6 +6,18 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
+              <div class="container">
+                @if(Session::has( 'update' ))
+                <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('update') }}</p>
+                @endif
+              </div>
+
+
+              <div class="container">
+                @if(Session::has( 'delete' ))
+                <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('delete') }}</p>
+                @endif
+              </div>
               <h5 class="card-title mb-4 d-inline">Orders</h5>
             
               <table class="table">
@@ -41,9 +53,9 @@
                             <td>${{ $order->price }}</td>
 
                             <td>{{ $order->status }}</td>
-                            <td><a href="{{ route('edit.order') }}" class="btn btn-warning  text-white text-center ">change status</a></td>
+                            <td><a href="{{ route('edit.order', $order->id) }}" class="btn btn-warning  text-white text-center ">change status</a></td>
 
-                            <td><a href="delete-orders.html" class="btn btn-danger  text-center ">delete</a></td>
+                            <td><a href="{{ route('delete.order', $order->id) }}" class="btn btn-danger  text-center ">delete</a></td>
                         </tr>
                     @endforeach
                   
