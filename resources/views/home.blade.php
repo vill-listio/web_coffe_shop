@@ -402,7 +402,204 @@
 	    </div>
 	  </section>
 
+<<<<<<< HEAD
    
+=======
+<section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Testimony</span>
+                <h2 class="mb-4">Kata Mereka</h2>
+                <p>Kami percaya rasa enak bukan cuma dari kopi, tapi juga dari pengalaman yang kamu rasakan di setiap
+                    kunjungan. Ini kata mereka yang udah nyobain langsung.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrap">
+        <div class="row d-flex no-gutters">
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_1.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Imron Sulistio<span class="position">Mahasiswa
+                            </span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
+                            decided to leave for the far World of Grammar.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_2.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;kopijo. &rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_3.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_2.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name. &rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_3.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+=======
+
+<section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/bg_1.jpg);"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Testimony</span>
+                <h2 class="mb-4">Kata Mereka</h2>
+                <p>Kami percaya rasa enak bukan cuma dari kopi, tapi juga dari pengalaman yang kamu rasakan di setiap
+                    kunjungan. Ini kata mereka yang udah nyobain langsung.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-wrap">
+        <div class="row d-flex no-gutters">
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_1.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name of Lorem Ipsum
+                            decided to leave for the far World of Grammar.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_2.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name. &rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_3.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end">
+                <div class="testimony overlay">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however.&rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_2.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg align-self-sm-end ftco-animate">
+                <div class="testimony">
+                    <blockquote>
+                        <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost
+                            unorthographic life One day however a small line of blind text by the name. &rdquo;</p>
+                    </blockquote>
+                    <div class="author d-flex mt-4">
+                        <div class="image mr-3 align-self-center">
+                            <img src="images/person_3.jpg" alt="">
+                        </div>
+                        <div class="name align-self-center">Louise Kelly <span class="position">Illustrator
+                                Designer</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+>>>>>>> c3ad37cf500cb4854db8ef33a4925f2295e0872f
+>>>>>>> 19ebae118b13cec218fc020ab57c6d0888586261
 
 <!-- <div class="container">
     <div class="row justify-content-center">
