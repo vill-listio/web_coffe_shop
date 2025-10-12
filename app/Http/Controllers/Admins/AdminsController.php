@@ -169,22 +169,34 @@ class AdminsController extends Controller
     }
 
 
-    public function storeProducts(Request $request) {
+        public function storeProducts(Request $request)
+    {
+        // Validasi input dulu
+        $request->validate([
+            'name' => 'required|max:100',
+            'price' => 'required|numeric|min:0',
+            'description' => 'required|max:500',
+            'type' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ], [
+            'name.required' => 'Nama menu wajib diisi.',
+            'price.required' => 'Harga wajib diisi.',
+            'price.numeric' => 'Harga harus berupa angka.',
+            'description.required' => 'Deskripsi wajib diisi.',
+            'type.required' => 'Jenis menu wajib diisi.',
+            'image.required' => 'Gambar wajib diunggah.',
+            'image.image' => 'File harus berupa gambar.',
+            'image.mimes' => 'Format gambar harus jpg, jpeg, atau png.',
+            'image.max' => 'Ukuran gambar maksimal 2MB.',
+        ]);
 
-        // Request()->validate([
-        //     "name" => "required|max:40",
-        //     "email" => "required|max:40",
-        //     "password" => "required|max:40",
-           
-        // ]);
-
-
+        // Upload gambar
         $destinationPath = 'assets/images/';
-        $myimage = $request->image->getClientOriginalName();
-        $request->image->move(public_path($destinationPath), $myimage);
+        $myimage = $request->file('image')->getClientOriginalName();
+        $request->file('image')->move(public_path($destinationPath), $myimage);
 
-
-        $storeProducts = Product::Create([
+        // Simpan ke database
+        $storeProducts = Product::create([
             "name" => $request->name,
             "price" => $request->price,
             "image" => $myimage,
@@ -192,12 +204,13 @@ class AdminsController extends Controller
             "type" => $request->type,
         ]);
 
-        if($storeProducts) {
-            return Redirect::route('all.products')->with( ['success' => "product created succesffully"] );
-
+        // Redirect dengan pesan sukses
+        if ($storeProducts) {
+            return Redirect::route('all.products')->with(['success' => "Produk berhasil ditambahkan!"]);
         }
-        
 
+        // Kalau gagal
+        return redirect()->back()->with(['error' => "Gagal menambahkan produk."]);
     }
 
     public function deleteProducts($id) {
