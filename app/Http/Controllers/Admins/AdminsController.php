@@ -180,6 +180,7 @@ class AdminsController extends Controller
     }
 
 
+<<<<<<< HEAD
     public function storeProducts(Request $request) {
 
         Request()->validate([
@@ -207,9 +208,36 @@ class AdminsController extends Controller
         
             $imageFile->move(public_path($destinationPath), $myimage);
     }
+=======
+        public function storeProducts(Request $request)
+    {
+        // Validasi input dulu
+        $request->validate([
+            'name' => 'required|max:100',
+            'price' => 'required|numeric|min:0',
+            'description' => 'required|max:500',
+            'type' => 'required',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ], [
+            'name.required' => 'Nama menu wajib diisi.',
+            'price.required' => 'Harga wajib diisi.',
+            'price.numeric' => 'Harga harus berupa angka.',
+            'description.required' => 'Deskripsi wajib diisi.',
+            'type.required' => 'Jenis menu wajib diisi.',
+            'image.required' => 'Gambar wajib diunggah.',
+            'image.image' => 'File harus berupa gambar.',
+            'image.mimes' => 'Format gambar harus jpg, jpeg, atau png.',
+            'image.max' => 'Ukuran gambar maksimal 2MB.',
+        ]);
 
+        // Upload gambar
+        $destinationPath = 'assets/images/';
+        $myimage = $request->file('image')->getClientOriginalName();
+        $request->file('image')->move(public_path($destinationPath), $myimage);
+>>>>>>> 7184b6efc85e009594565638ed5a7ce482dbb2af
 
-        $storeProducts = Product::Create([
+        // Simpan ke database
+        $storeProducts = Product::create([
             "name" => $request->name,
             "price" => $request->price,
             "image" => $myimage,
@@ -217,10 +245,11 @@ class AdminsController extends Controller
             "type" => $request->type,
         ]);
 
-        if($storeProducts) {
-            return Redirect::route('all.products')->with( ['success' => "product created succesffully"] );
-
+        // Redirect dengan pesan sukses
+        if ($storeProducts) {
+            return Redirect::route('all.products')->with(['success' => "Produk berhasil ditambahkan!"]);
         }
+<<<<<<< HEAD
 
 
         
@@ -275,7 +304,11 @@ class AdminsController extends Controller
 
         }
 
+=======
+>>>>>>> 7184b6efc85e009594565638ed5a7ce482dbb2af
 
+        // Kalau gagal
+        return redirect()->back()->with(['error' => "Gagal menambahkan produk."]);
     }
 
 
