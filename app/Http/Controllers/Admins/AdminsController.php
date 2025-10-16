@@ -17,6 +17,7 @@ class AdminsController extends Controller
 {
     
 
+
     public function viewLogin() {
 
 
@@ -48,7 +49,17 @@ class AdminsController extends Controller
     }
 
 
+    public function adminLogout(Request $request) {
+    
+    auth()->guard('admin')->logout();
 
+    
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    
+    return redirect()->route('index');
+    }
 
 
     public function displayAllAdmins() {
@@ -171,17 +182,31 @@ class AdminsController extends Controller
 
     public function storeProducts(Request $request) {
 
-        // Request()->validate([
-        //     "name" => "required|max:40",
-        //     "email" => "required|max:40",
-        //     "password" => "required|max:40",
+        Request()->validate([
+            "name" => "required|max:40",
+            "price" => "required|numeric",
+            "image" => "required|image|mimes:jpeg,png,jpg|max:5048", 
+            "description" => "required",
+            "type" => "required",
            
-        // ]);
+        ]);
 
 
+        $myimage = null; 
+
+    
+        if ($request->hasFile('image')) {
         $destinationPath = 'assets/images/';
-        $myimage = $request->image->getClientOriginalName();
-        $request->image->move(public_path($destinationPath), $myimage);
+        
+        
+            $imageFile = $request->file('image');
+        
+        
+            $myimage = $imageFile->getClientOriginalName();
+        
+        
+            $imageFile->move(public_path($destinationPath), $myimage);
+    }
 
 
         $storeProducts = Product::Create([
@@ -196,9 +221,63 @@ class AdminsController extends Controller
             return Redirect::route('all.products')->with( ['success' => "product created succesffully"] );
 
         }
+
+
         
+    }
+
+
+
+    public function editProducts($id) {
+
+        $product = Product::find($id);
+        
+        return view('admins.editproducts', compact('product'));
+    }
+
+
+
+    public function UpdateProducts(Request $request, $id) {
+
+
+        $product = Product::find($id);
+
+        $myimage = $product->image;
+
+
+        if ($request->hasFile('image')) {
+        $destinationPath = 'assets/images/';
+        $newimage = $request->file('image');
+        
+        
+            if (File::exists(public_path($destinationPath . $product->image))) {
+                File::delete(public_path($destinationPath . $product->image));
+            }
+        
+        
+            $myimage = $newimage->getClientOriginalName();
+            $newimage->move(public_path($destinationPath), $myimage);
+        }
+
+
+        
+        $product->update([
+            "name" => $request->name,
+            "price" => $request->price,
+            "image" => $myimage,
+            "description" => $request->description,
+            "type" => $request->type,
+        ]);
+
+        if($product) {
+
+            return Redirect::route('all.products')->with( ['update' => "product updated succesffully"] );
+
+        }
+
 
     }
+
 
     public function deleteProducts($id) {
 

@@ -67,6 +67,7 @@ Route::post('admin/login', [App\Http\Controllers\Admins\AdminsController::class,
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
     Route::get('index', [App\Http\Controllers\Admins\AdminsController::class, 'index'])->name('admins.dashboard');
+    Route::post('logout', [App\Http\Controllers\Admins\AdminsController::class, 'adminLogout'])->name('admins.logout'); 
 
 
     //admins section
@@ -89,6 +90,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
     Route::get('all-products', [App\Http\Controllers\Admins\AdminsController::class, 'displayProducts'])->name('all.products');
     Route::get('create-products', [App\Http\Controllers\Admins\AdminsController::class, 'createProducts'])->name('create.products');
     Route::post('create-products', [App\Http\Controllers\Admins\AdminsController::class, 'storeProducts'])->name('store.products');
+    Route::get('edit-products/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'editProducts'])->name('edit.products');
+    Route::post('edit-products/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'UpdateProducts'])->name('update.products');
     Route::get('delete-products/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'deleteProducts'])->name('delete.products');
     
     //bookings
