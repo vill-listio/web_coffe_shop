@@ -3,139 +3,145 @@
 @section('content')
 <section class="home-slider owl-carousel">
 
-      <div class="slider-item" style="background-image: url({{ asset('assets/images/bg_3.jpg')}});" >
-      	<div class="overlay"></div>
+    <div class="slider-item" style="background-image: url({{ asset('assets/images/bg_3.jpg')}});">
+        <div class="overlay"></div>
         <div class="container">
-          <div class="row slider-text justify-content-center align-items-center">
+            <div class="row slider-text justify-content-center align-items-center">
 
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<h1 class="mb-3 mt-5 bread">Checkout</h1>
-	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Checkout</span></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 ftco-animate">
-						<form method="POST" action="{{ route('proccess.checkout')}}" class="billing-form ftco-bg-dark p-3 p-md-5">
-							<h3 class="mb-4 billing-heading">Billing Details</h3>
-                            @csrf
-	          	<div class="row align-items-end">
-	          		<div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="firstname">Firt Name</label>
-	                  <input type="text" name="first_name" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('first_name'))
-								<p class="alert alert-success">{{ $errors->first('first_name') }}</p>
-							@endif
-	              </div>
-	              <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="lastname">Last Name</label>
-	                  <input type="text" name="last_name" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('last_name'))
-								<p class="alert alert-success">{{ $errors->first('last_name') }}</p>
-							@endif
+                <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                    <h1 class="mb-3 mt-5 bread">Checkout</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Checkout</span>
+                    </p>
                 </div>
-                <div class="w-100"></div>
-		            <div class="col-md-12">
-		            	<div class="form-group">
-		            		<label for="country">State / Country</label>
-		            		<div class="select-wrap">
-		                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                  <select name="state" id="" class="form-control">
-		                  	<option value="France">France</option>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <form method="POST" action="{{ route('proccess.checkout')}}"
+                    class="billing-form ftco-bg-dark p-3 p-md-5">
+                    <h3 class="mb-4 billing-heading">Billing Details</h3>
+                    @csrf
+                    <div class="row align-items-end">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstname">Firt Name</label>
+                                <input type="text" name="first_name" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('first_name'))
+                            <p class="alert alert-success">{{ $errors->first('first_name') }}</p>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="last_name" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('last_name'))
+                            <p class="alert alert-success">{{ $errors->first('last_name') }}</p>
+                            @endif
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="country">State / Country</label>
+                                <div class="select-wrap">
+                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                    <select name="state" id="" class="form-control">
+                                        <option value="Indonesia">Indonesia</option>
+                                        <!-- <option value="France">France</option>
 		                    <option value="Italy">Italy</option>
 		                    <option value="Philippines">Philippines</option>
 		                    <option value="South Korea">South Korea</option>
 		                    <option value="Hongkong">Hongkong</option>
-		                    <option value="Japan">Japan</option>
-		                    <option value="Indonesia">Indonesia</option>
-		                  </select>
-		                </div>
-		            	</div>
-		            </div>
-		            <div class="w-100"></div>
-		            <div class="col-md-12">
-		            	<div class="form-group">
-	                	<label for="streetaddress">Street Address</label>
-	                  <textarea name="address" cols="10" rows="10" class="form-control" placeholder="House number and street name"></textarea>
-	                </div>
-							@if($errors->has('address'))
-								<p class="alert alert-success">{{ $errors->first('address') }}</p>
-							@endif
-		            </div>
-		            <!-- <div class="col-md-12">
+		                    <option value="Japan">Japan</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="streetaddress">Street Address</label>
+                                <textarea name="address" cols="10" rows="10" class="form-control"
+                                    placeholder="House number and street name"></textarea>
+                            </div>
+                            @if($errors->has('address'))
+                            <p class="alert alert-success">{{ $errors->first('address') }}</p>
+                            @endif
+                        </div>
+                        <!-- <div class="col-md-12">
 		            	<div class="form-group">
 	                  <input type="text" class="form-control" placeholder="Appartment, suite, unit etc: (optional)">
 	                </div> 
 		            </div> -->
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-	                	<label for="towncity">Town / City</label>
-	                  <input name="city" type="text" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('city'))
-								<p class="alert alert-success">{{ $errors->first('city') }}</p>
-							@endif
-		            </div>
-		            <div class="col-md-6">
-		            	<div class="form-group">
-		            		<label for="postcodezip">Postcode / ZIP *</label>
-	                  <input name="zip_code" type="text" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('zip_code'))
-								<p class="alert alert-success">{{ $errors->first('zip_code') }}</p>
-							@endif
-		            </div>
-		            <div class="w-100"></div>
-		            <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="phone">Phone</label>
-	                  <input name="phone" type="text" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('phone'))
-								<p class="alert alert-success">{{ $errors->first('phone') }}</p>
-							@endif
-	              </div>
-	              <div class="col-md-6">
-	                <div class="form-group">
-	                	<label for="emailaddress">Email Address</label>
-	                  <input name="email" type="text" class="form-control" placeholder="">
-	                </div>
-							@if($errors->has('email'))
-								<p class="alert alert-success">{{ $errors->first('email') }}</p>
-							@endif
-                </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input name="price" type="hidden" value="{{ Session::get('price')}}"class="form-control" placeholder="">
-	                </div>
-                </div>
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input name="user_id" type="hidden" value="{{ Auth::user()->id}}"class="form-control" placeholder="">
-	                </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-12">
-                	<div class="form-group mt-4">
-					    <div class="radio">
-                            <button type="submit" name="submit" class="btn btn-primary py-3 px-4">Place an order</button>
+                        <div class="w-100"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="towncity">Town / City</label>
+                                <input name="city" type="text" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('city'))
+                            <p class="alert alert-success">{{ $errors->first('city') }}</p>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="postcodezip">Postcode / ZIP *</label>
+                                <input name="zip_code" type="text" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('zip_code'))
+                            <p class="alert alert-success">{{ $errors->first('zip_code') }}</p>
+                            @endif
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input name="phone" type="text" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('phone'))
+                            <p class="alert alert-success">{{ $errors->first('phone') }}</p>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="emailaddress">Email Address</label>
+                                <input name="email" type="text" class="form-control" placeholder="">
+                            </div>
+                            @if($errors->has('email'))
+                            <p class="alert alert-success">{{ $errors->first('email') }}</p>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="price" type="hidden" value="{{ Session::get('price')}}"
+                                    class="form-control" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input name="user_id" type="hidden" value="{{ Auth::user()->id}}" class="form-control"
+                                    placeholder="">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col-md-12">
+                            <div class="form-group mt-4">
+                                <div class="radio">
+                                    <button type="submit" name="submit" class="btn btn-primary py-3 px-4">Place an
+                                        order</button>
 
-						</div>
-					</div>
-                </div>
-	            </div>
-	          </form><!-- END -->
-    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form><!-- END -->
+</section>
 
 @endsection
