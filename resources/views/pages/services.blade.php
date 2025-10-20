@@ -29,8 +29,9 @@
                         <span class="flaticon-choices"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Easy to Order</h3>
-                        <p>Pesan kopi favoritmu hanya dengan beberapa klik cepat dan tanpa ribet!</p>
+                        <h3 class="heading">Mudah Dipesan</h3>
+                        <p>Kopi bukan soal ribet. Di sini, cukup satu langkah kecil untuk memulai pagi yang hangat dan
+                            tenang.</p>
                     </div>
                 </div>
             </div>
@@ -40,8 +41,9 @@
                         <span class="flaticon-delivery-truck"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Fastest Delivery</h3>
-                        <p>Kami pastikan pesananmu tiba hangat dan tepat waktu ke tempatmu.</p>
+                        <h3 class="heading">Cepat Sampai</h3>
+                        <p>Dari seduhan kami ke tanganmu tanpa menunggu lama. Karena hangatnya kopi tak menunggu siapa
+                            pun.</p>
                     </div>
                 </div>
             </div>
@@ -51,8 +53,9 @@
                         <span class="flaticon-coffee-bean"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">Quality Coffee</h3>
-                        <p>Dibuat dari biji pilihan dengan cita rasa premium untuk hari yang lebih baik.</p>
+                        <h3 class="heading">Kopi Berkualitas</h3>
+                        <p>Setiap biji kami pilih dengan hati. Karena rasa terbaik lahir dari proses yang sederhana tapi
+                            tulus.</p>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@
                         <h2 class="h4">Contact Information</h2>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <p><span>Alamat:</span>Jln. Jln ke Bumiayu, Brebes</p>
+                        <p><span>Alamat:</span>Glempang, Pagojengan, Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah</p>
                     </div>
                     <div class="col-md-12 mb-3">
                         <p><span>Telepon / WhatsApp:</span> <a>089xxxxxxxx</a></p>

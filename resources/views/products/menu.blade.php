@@ -41,7 +41,7 @@
                         <div class="icon"><span class="icon-clock-o"></span></div>
                         <div class="text">
                             <h3>Jam Buka</h3>
-                            <p>Setiap Hari: 10.00 – 22.00 WIB</p>
+                            <p>Setiap Hari: 12.00 – 23.00 WIB</p>
                         </div>
                     </div>
                 </div>
@@ -144,10 +144,13 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Discover</span>
-                <h2 class="mb-4">Our Products</h2>
-                <p>Kami menyajikan kopi dan makanan dengan cita rasa autentik, dibuat dari bahan pilihan untuk menemani
-                    setiap obrolan dan momen hangatmu di My Coffee.</p>
+                <span class="subheading">Rasa yang Bercerita</span>
+                <h2 class="mb-4">Menu Kami</h2>
+                <p class="mb-4">
+                    Kami percaya, setiap cangkir kopi punya kisahnya sendiri.
+                    Dari aroma pertama yang menyapa, hingga tegukan terakhir yang menenangkan.
+                    Di sini, kamu tak sekadar memesan kamu menikmati waktu, perlahan.
+                </p>
             </div>
         </div>
         <div class="row d-md-flex">

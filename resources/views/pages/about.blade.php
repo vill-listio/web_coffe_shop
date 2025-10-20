@@ -20,19 +20,21 @@
 </section>
 
 <section class="ftco-about d-md-flex">
-    <div class="one-half img" style="background-image: url({{ asset('assets/images/about.jpg)') }};"></div>
+    <div class="one-half img" style="background-image: url(images/about.jpg);"></div>
     <div class="one-half ftco-animate">
         <div class="overlap">
-            <div class="heading-section ftco-animate ">
-                <span class="subheading">Discover</span>
-                <h2 class="mb-4">Our Story</h2>
+            <div class="heading-section ftco-animate">
+                <span class="subheading">Sepotong Cerita</span>
+                <h2 class="mb-4">Cerita di Balik Kopi</h2>
             </div>
             <div>
-                <p>Setiap cerita indah selalu dimulai dari secangkir kopi. My Coffee hadir dari keinginan sederhana
-                    untuk
-                    menciptakan tempat di mana siapa pun bisa merasa nyaman, menikmati aroma kopi, dan berbagi cerita.
-                    Kami percaya bahwa kopi bukan hanya soal rasa,
-                    tapi juga tentang kebersamaan, tawa, dan momen kecil yang berarti.</p>
+                <p>
+                    Semua berawal dari secangkir kopi dan obrolan sederhana di malam yang pelan.
+                    Kami ingin menciptakan tempat di mana setiap tegukan membawa cerita,
+                    setiap aroma jadi pengingat bahwa hidup tak perlu terburu-buru.
+                    Di sini, kamu bisa duduk, diam sejenak, dan menemukan kembali dirimu
+                    di antara denting sendok dan lagu-lagu pelan yang menenangkan.
+                </p>
             </div>
         </div>
     </div>
@@ -44,10 +46,14 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Testimony</span>
-                <h2 class="mb-4">Customers Says</h2>
-                <p>Kami percaya rasa enak bukan cuma dari kopi, tapi juga dari pengalaman yang kamu rasakan di setiap
-                    kunjungan. Ini kata mereka yang udah nyobain langsung.</p>
+                <span class="subheading">Cerita Mereka</span>
+                <h2 class="mb-4">Suara dari Penikmat Kopi</h2>
+                <p>
+                    Setiap cangkir punya kisahnya sendiri
+                    tentang pagi yang kembali hangat,
+                    tentang pertemuan yang tak sengaja,
+                    atau sekadar jeda di tengah hari yang berat.
+                </p>
             </div>
         </div>
     </div>
@@ -120,8 +126,7 @@
                         <div class="image mr-3 align-self-center">
                             <img src="images/person_3.jpg" alt="">
                         </div>
-                        <div class="name align-self-center">Bilal Restu Restiawan<span
-                                class="position">Mahasiswar</span>
+                        <div class="name align-self-center">Bilal Restu Restiawan<span class="position">Mahasiswa</span>
                         </div>
                     </div>
                 </div>
@@ -199,7 +204,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="6">0</strong>
+                                <strong class="number" data-number="0">0</strong>
                                 <span>Happy Customer</span>
                             </div>
                         </div>
