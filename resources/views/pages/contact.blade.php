@@ -11,7 +11,8 @@
 
                 <div class="col-md-7 col-sm-12 text-center ftco-animate">
                     <h1 class="mb-3 mt-5 bread">Contact Us</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home</a>
+                        </span> <span>Contact</span>
                     </p>
                 </div>
 
@@ -29,7 +30,7 @@
                         <h2 class="h4">Contact Information</h2>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <p><span>Alamat:</span>Glempang, Pagojengan, Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah</p>
+                        <p><span>Alamat: </span>Glempang, Pagojengan, Kec. Paguyangan, Kabupaten Brebes, Jawa Tengah</p>
                     </div>
                     <div class="col-md-12 mb-3">
                         <p><span>Telepon / WhatsApp:</span> <a>089xxxxxxxx</a></p>

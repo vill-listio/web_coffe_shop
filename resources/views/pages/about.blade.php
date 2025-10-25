@@ -10,7 +10,8 @@
 
                 <div class="col-md-7 col-sm-12 text-center ftco-animate">
                     <h1 class="mb-3 mt-5 bread">About Us</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home</a>
+                        </span> <span>About</span>
                     </p>
                 </div>
 
@@ -140,10 +141,11 @@
         <div class="row align-items-center">
             <div class="col-md-6 pr-md-5">
                 <div class="heading-section text-md-right ftco-animate">
-                    <span class="subheading">Discover</span>
-                    <h2 class="mb-4">Our Menu</h2>
-                    <p class="mb-4">Setiap cangkir punya cerita. Kami sajikan kopi terbaik dengan cita rasa khas dan
-                        suasana yang tenang untuk setiap momen istimewa.</p>
+                    <span class="subheading">Rasa yang Bercerita</span>
+                    <h2 class="mb-4">Menu Kami</h2>
+                    <p class="mb-4">Kami percaya, setiap cangkir kopi punya kisahnya sendiri.
+                        Dari aroma pertama yang menyapa, hingga tegukan terakhir yang menenangkan.
+                        Di sini, kamu tak sekadar memesan kamu menikmati waktu, perlahan.</p>
                     <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
                 </div>
             </div>
@@ -204,7 +206,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="0">0</strong>
+                                <strong class="number" data-number="6">0</strong>
                                 <span>Happy Customer</span>
                             </div>
                         </div>

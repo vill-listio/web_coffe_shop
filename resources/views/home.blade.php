@@ -20,8 +20,9 @@
                     <p>
                         <a href="#" class="btn p-3 px-xl-4 py-xl-3"
                             style="background-color:#C6A664; color:#1E1E1E; border:none;">Order Now</a>
-                        <a href="#" class="btn p-3 px-xl-4 py-xl-3"
-                            style="border:1px solid #C6A664; color:#C6A664;">View Menu</a>
+                        <a href="products/menu" class="btn p-3 px-xl-4 py-xl-3"
+                            style="border:1px solid #C6A664; color:#C6A664;">View
+                            Menu</a>
                     </p>
                 </div>
             </div>
@@ -44,7 +45,7 @@
                     <p>
                         <a href="#" class="btn p-3 px-xl-4 py-xl-3"
                             style="background-color:#C6A664; color:#1E1E1E; border:none;">Order Now</a>
-                        <a href="#" class="btn p-3 px-xl-4 py-xl-3"
+                        <a href="products/menu" class="btn p-3 px-xl-4 py-xl-3"
                             style="border:1px solid #C6A664; color:#C6A664;">View Menu</a>
                     </p>
                 </div>
@@ -68,7 +69,7 @@
                     <p>
                         <a href="#" class="btn p-3 px-xl-4 py-xl-3"
                             style="background-color:#C6A664; color:#1E1E1E; border:none;">Order Now</a>
-                        <a href="#" class="btn p-3 px-xl-4 py-xl-3"
+                        <a href="products/menu" class="btn p-3 px-xl-4 py-xl-3"
                             style="border:1px solid #C6A664; color:#C6A664;">View Menu</a>
                     </p>
                 </div>
@@ -203,7 +204,7 @@
                     Untuk melakukan pemesanan meja, Anda harus masuk ke akun Anda terlebih dahulu.
                 </p>
                 <a href="{{ route('login') }}" class="btn btn-primary p-3 px-xl-4 py-xl-3">
-                    LOGIN SEKARANG
+                    LOGIN
                 </a>
 
                 @if (Route::has('register'))
@@ -301,7 +302,8 @@
                         Dari aroma pertama yang menyapa, hingga tegukan terakhir yang menenangkan.
                         Di sini, kamu tak sekadar memesan kamu menikmati waktu, perlahan.
                     </p>
-                    <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
+                    <p><a href="products/menu" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a>
+                    </p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -362,7 +364,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <div class="icon"><span class="flaticon-coffee-cup"></span></div>
-                                <strong class="number" data-number="0">0</strong>
+                                <strong class="number" data-number="6">0</strong>
                                 <span>Happy Customer</span>
                             </div>
                         </div>

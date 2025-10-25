@@ -12,206 +12,122 @@ use Illuminate\Support\Facades\Hash;
 use Redirect;
 use File;
 
-
 class AdminsController extends Controller
 {
-    
-
-
-    public function viewLogin() {
-
-
+    public function viewLogin()
+    {
         return view('admins.login');
     }
 
-
-    public function checkLogin(Request $request) {
-
+    public function checkLogin(Request $request)
+    {
         $remember_me = $request->has('remember_me') ? true : false;
 
         if (auth()->guard('admin')->attempt(['email' => $request->input("email"), 'password' => $request->input("password")], $remember_me)) {
-            
-            return redirect() -> route('admins.dashboard');
+            return redirect()->route('admins.dashboard');
         }
-        return redirect()->back()->with(['error' => 'error logging in']);
+        return redirect()->back()->with(['error' => 'Gagal login, periksa kembali email dan password Anda.']);
     }
 
-
-    public function index() {
-
-        $productsCount = Product::select()->count();
-        $orderssCount = Order::select()->count();
-        $bookingsCount = Booking::select()->count();
-        $adminsCount = Admin::select()->count();
-
+    public function index()
+    {
+        $productsCount = Product::count();
+        $orderssCount = Order::count();
+        $bookingsCount = Booking::count();
+        $adminsCount = Admin::count();
 
         return view('admins.index', compact('productsCount', 'orderssCount', 'bookingsCount', 'adminsCount'));
     }
 
+    public function adminLogout(Request $request)
+    {
+        auth()->guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-    public function adminLogout(Request $request) {
-    
-    auth()->guard('admin')->logout();
-
-    
-    $request->session()->invalidate();
-    $request->session()->regenerateToken();
-
-    
-    return redirect()->route('index');
+        return redirect()->route('index');
     }
 
+    // ================= ADMIN ==================
 
-    public function displayAllAdmins() {
-
-        $allAdmins = Admin::select()->orderBy('id', 'desc')->get();
-        
-
+    public function displayAllAdmins()
+    {
+        $allAdmins = Admin::orderBy('id', 'desc')->get();
         return view('admins.alladmins', compact('allAdmins'));
     }
 
-    public function createAdmins() {
-
-        
-        
-
+    public function createAdmins()
+    {
         return view('admins.createadmins');
     }
 
-
-    public function storeAdmins(Request $request) {
-
-        Request()->validate([
+    public function storeAdmins(Request $request)
+    {
+        $request->validate([
             "name" => "required|max:40",
-            "email" => "required|max:40",
-            "password" => "required|max:40",
-           
+            "email" => "required|email|max:40|unique:admins,email",
+            "password" => "required|min:6|max:40",
         ]);
 
-        $storeAdmins = Admin::Create([
+        $storeAdmins = Admin::create([
             "name" => $request->name,
             "email" => $request->email,
             "password" => Hash::make($request->password),
         ]);
 
-        if($storeAdmins) {
-            return Redirect::route('all.admins')->with( ['success' => "admin created succesffully"] );
-
+        if ($storeAdmins) {
+            return Redirect::route('all.admins')->with(['success' => "Admin berhasil dibuat."]);
         }
-        
 
+        return redirect()->back()->with(['error' => "Gagal membuat admin."]);
     }
 
+    // ================= ORDERS ==================
 
-    
-
-    //orders
-
-
-    public function displayAllOrders() {
-
-        $allOrders = Order::select()->orderBy('id', 'desc')->get();
-        
-
+    public function displayAllOrders()
+    {
+        $allOrders = Order::orderBy('id', 'desc')->get();
         return view('admins.allorders', compact('allOrders'));
     }
 
-
-    public function editOrders($id) {
-
+    public function editOrders($id)
+    {
         $order = Order::find($id);
-        
-
         return view('admins.editorders', compact('order'));
     }
-    
-    
-    public function UpdateOrders(Request $request, $id) {
 
+    public function UpdateOrders(Request $request, $id)
+    {
         $order = Order::find($id);
-
         $order->update($request->all());
 
-        if($order) {
-
-            return Redirect::route('all.orders')->with( ['update' => "order status updated succesffully"] );
-
-        }
-        
-
+        return Redirect::route('all.orders')->with(['update' => "Status pesanan berhasil diperbarui."]);
     }
 
-
-    public function deleteOrders($id) {
-
+    public function deleteOrders($id)
+    {
         $order = Order::find($id);
-
         $order->delete();
 
-        if($order) {
-
-            return Redirect::route('all.orders')->with( ['delete' => "order deleted succesffully"] );
-
-        }
-        
-
+        return Redirect::route('all.orders')->with(['delete' => "Pesanan berhasil dihapus."]);
     }
 
+    // ================= PRODUCTS ==================
 
-    public function displayProducts() {
-
-        $products = Product::select()->orderBy('id', 'desc')->get();
-
-        
-        return view('admins.allproducts', compact('products'));
-        
-        
-    }
-
-
-    public function createProducts() {
-
-        
-
-        
-        return view('admins.createproducts');
-        
-        
-    }
-
-
-<<<<<<< HEAD
-    public function storeProducts(Request $request) {
-
-        Request()->validate([
-            "name" => "required|max:40",
-            "price" => "required|numeric",
-            "image" => "required|image|mimes:jpeg,png,jpg|max:5048", 
-            "description" => "required",
-            "type" => "required",
-           
-        ]);
-
-
-        $myimage = null; 
-
-    
-        if ($request->hasFile('image')) {
-        $destinationPath = 'assets/images/';
-        
-        
-            $imageFile = $request->file('image');
-        
-        
-            $myimage = $imageFile->getClientOriginalName();
-        
-        
-            $imageFile->move(public_path($destinationPath), $myimage);
-    }
-=======
-        public function storeProducts(Request $request)
+    public function displayProducts()
     {
-        // Validasi input dulu
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('admins.allproducts', compact('products'));
+    }
+
+    public function createProducts()
+    {
+        return view('admins.createproducts');
+    }
+
+    public function storeProducts(Request $request)
+    {
+        // Validasi input
         $request->validate([
             'name' => 'required|max:100',
             'price' => 'required|numeric|min:0',
@@ -234,7 +150,6 @@ class AdminsController extends Controller
         $destinationPath = 'assets/images/';
         $myimage = $request->file('image')->getClientOriginalName();
         $request->file('image')->move(public_path($destinationPath), $myimage);
->>>>>>> 7184b6efc85e009594565638ed5a7ce482dbb2af
 
         // Simpan ke database
         $storeProducts = Product::create([
@@ -245,51 +160,36 @@ class AdminsController extends Controller
             "type" => $request->type,
         ]);
 
-        // Redirect dengan pesan sukses
         if ($storeProducts) {
             return Redirect::route('all.products')->with(['success' => "Produk berhasil ditambahkan!"]);
         }
-<<<<<<< HEAD
 
-
-        
+        return redirect()->back()->with(['error' => "Gagal menambahkan produk."]);
     }
 
-
-
-    public function editProducts($id) {
-
+    public function editProducts($id)
+    {
         $product = Product::find($id);
-        
         return view('admins.editproducts', compact('product'));
     }
 
-
-
-    public function UpdateProducts(Request $request, $id) {
-
-
+    public function UpdateProducts(Request $request, $id)
+    {
         $product = Product::find($id);
-
         $myimage = $product->image;
 
-
         if ($request->hasFile('image')) {
-        $destinationPath = 'assets/images/';
-        $newimage = $request->file('image');
-        
-        
+            $destinationPath = 'assets/images/';
+            $newimage = $request->file('image');
+
             if (File::exists(public_path($destinationPath . $product->image))) {
                 File::delete(public_path($destinationPath . $product->image));
             }
-        
-        
+
             $myimage = $newimage->getClientOriginalName();
             $newimage->move(public_path($destinationPath), $myimage);
         }
 
-
-        
         $product->update([
             "name" => $request->name,
             "price" => $request->price,
@@ -298,97 +198,49 @@ class AdminsController extends Controller
             "type" => $request->type,
         ]);
 
-        if($product) {
-
-            return Redirect::route('all.products')->with( ['update' => "product updated succesffully"] );
-
-        }
-
-=======
->>>>>>> 7184b6efc85e009594565638ed5a7ce482dbb2af
-
-        // Kalau gagal
-        return redirect()->back()->with(['error' => "Gagal menambahkan produk."]);
+        return Redirect::route('all.products')->with(['update' => "Produk berhasil diperbarui."]);
     }
 
-
-    public function deleteProducts($id) {
-
-
+    public function deleteProducts($id)
+    {
         $product = Product::find($id);
 
-         if(File::exists(public_path('assets/images/' . $product->image))){
+        if (File::exists(public_path('assets/images/' . $product->image))) {
             File::delete(public_path('assets/images/' . $product->image));
-        }else{
-            //dd('File does not exists.');
         }
 
         $product->delete();
 
-        
-        if($product) {
-            return Redirect::route('all.products')->with( ['delete' => "product deleted succesffully"] );
-
-        }        
-        
+        return Redirect::route('all.products')->with(['delete' => "Produk berhasil dihapus."]);
     }
 
-    
+    // ================= BOOKINGS ==================
 
-    public function displayBookings() {
-
-        $bookings = Booking::select()->orderBy('id', 'desc')->get();
-
-        
+    public function displayBookings()
+    {
+        $bookings = Booking::orderBy('id', 'desc')->get();
         return view('admins.allbookings', compact('bookings'));
-        
-        
     }
-    
-    public function editBooking($id) {
 
+    public function editBooking($id)
+    {
         $booking = Booking::find($id);
-        
-
         return view('admins.editbooking', compact('booking'));
     }
 
-
-
-    public function UpdateBooking(Request $request, $id) {
-
+    public function UpdateBooking(Request $request, $id)
+    {
         $booking = Booking::find($id);
-
         $booking->update($request->all());
 
-
-
-        if($booking) {
-
-            return Redirect::route('all.bookings')->with( ['update' => "booking status updated succesffully"] );
-
-        }
-        
-
+        return Redirect::route('all.bookings')->with(['update' => "Status pemesanan berhasil diperbarui."]);
     }
 
-    public function deleteBooking($id) {
-
-
+    public function deleteBooking($id)
+    {
         $booking = Booking::find($id);
-
-        
-
         $booking->delete();
 
-        
-        if($booking) {
-            return Redirect::route('all.bookings')->with( ['delete' => "booking deleted succesffully"] );
-
-        }        
-        
+        return Redirect::route('all.bookings')->with(['delete' => "Pemesanan berhasil dihapus."]);
     }
-    
-
-
 }

@@ -11,7 +11,8 @@
 
                 <div class="col-md-7 col-sm-12 text-center ftco-animate">
                     <h1 class="mb-3 mt-5 bread">Cart</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
+                    <p class="breadcrumbs"><span class="mr-2"><a href="{{ route('home') }}">Home</a>
+                        </span> <span>Cart</span></p>
                 </div>
 
             </div>
@@ -82,13 +83,13 @@
         <div class="row justify-content-end">
             <div class="col col-lg-3 col-md-6 mt-5 cart-wrap ftco-animate">
                 <div class="cart-total mb-3">
-                    <h3>Cart Totals</h3>
+                    <h3>Rincian Pesanan</h3>
                     <p class="d-flex">
                         <span>Subtotal</span>
                         <span>${{ $totalPrice }}</span>
                     </p>
                     <p class="d-flex">
-                        <span>Delivery</span>
+                        <span>Biaya Pengantaran</span>
                         <span>$0.00</span>
                     </p>
 
@@ -109,7 +110,7 @@
                 </form>
                 @else
 
-                <p class="text-center alert alert-success">Anda tidak dapat melakukan pembayaran karena tidak ada barang
+                <p class="text-center alert alert-success">Anda tidak dapat melakukan pembayaran karena tidak ada produk
                     di keranjang</p>
                 @endif
             </div>

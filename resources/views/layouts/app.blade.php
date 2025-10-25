@@ -123,11 +123,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">About Us</h2>
                         <p>
-                            Semua berawal dari secangkir kopi dan obrolan sederhana di malam yang pelan.
-                            Kami ingin menciptakan tempat di mana setiap tegukan membawa cerita,
-                            setiap aroma jadi pengingat bahwa hidup tak perlu terburu-buru.
-                            Di sini, kamu bisa duduk, diam sejenak, dan menemukan kembali dirimu
-                            di antara denting sendok dan lagu-lagu pelan yang menenangkan.
+                            Semua berawal dari secangkir kopi dan obrolan malam yang tenang.
+                            Di sini, setiap tegukan adalah cerita, setiap aroma mengingatkan bahwa hidup tak perlu
+                            tergesa.
                         </p>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                             <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
