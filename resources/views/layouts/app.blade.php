@@ -48,7 +48,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">Ruang <small>Senja</small></a>
+                <a class="navbar-brand" href="{{ url('/') }}">Cafe <small>Jentaka</small></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                     aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="oi oi-menu"></span> Menu
@@ -136,28 +136,28 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Recent Blog</h2>
+                        <h2 class="ftco-heading-2">Selected Article</h2>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
                             <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
+                                <h3 class="heading"><a href="https://simple.wikipedia.org/wiki/Caf%C3%A9">About Café</a>
                                 </h3>
                                 <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                                    <div><a href="#"><span class="icon-calendar"></span> Aug 20, 2025</a></div>
                                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                    <div><a href="#"><span class="icon-chat"></span> 0</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="block-21 mb-4 d-flex">
                             <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                             <div class="text">
-                                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a>
+                                <h3 class="heading"><a href="https://id.wikipedia.org/wiki/Kopi">Kopi</a>
                                 </h3>
                                 <div class="meta">
-                                    <div><a href="#"><span class="icon-calendar"></span> Sept 15, 2018</a></div>
+                                    <div><a href="#"><span class="icon-calendar"></span> Okt 14, 2025</a></div>
                                     <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                                    <div><a href="#"><span class="icon-chat"></span> 0</a></div>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p>
-                        &copy; Ruang Senja <script>
+                        &copy; Cafe Jentaka <script>
                         document.write(new Date().getFullYear());
                         </script>. All rights reserved.
                     </p>

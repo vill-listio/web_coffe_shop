@@ -18,7 +18,7 @@
                         Duduklah sebentar biarkan aroma kopi bercerita.
                     </p>
                     <p>
-                        <a href="#" class="btn p-3 px-xl-4 py-xl-3"
+                        <a href="products/menu" class="btn p-3 px-xl-4 py-xl-3"
                             style="background-color:#C6A664; color:#1E1E1E; border:none;">Order Now</a>
                         <a href="products/menu" class="btn p-3 px-xl-4 py-xl-3"
                             style="border:1px solid #C6A664; color:#C6A664;">View

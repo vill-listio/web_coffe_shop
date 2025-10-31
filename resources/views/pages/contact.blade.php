@@ -36,7 +36,7 @@
                         <p><span>Telepon / WhatsApp:</span> <a>089xxxxxxxx</a></p>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">ruangsenja@gmail.com</a></p>
+                        <p><span>Email:</span> <a href="mailto:info@yoursite.com">cafejentaka@gmail.com</a></p>
                     </div>
                     <div class="col-md-12 mb-3">
                         <p><span>Website:</span> <a href="#">yoursite.com</a></p>
