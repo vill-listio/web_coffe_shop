@@ -167,10 +167,9 @@
                     <div class="ftco-footer-widget mb-4 ml-md-4">
                         <h2 class="ftco-heading-2">Services</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Cooked</a></li>
-                            <li><a href="#" class="py-2 d-block">Deliver</a></li>
-                            <li><a href="#" class="py-2 d-block">Quality Foods</a></li>
-                            <li><a href="#" class="py-2 d-block">Mixed</a></li>
+                            <li><a href="{{ route('services') }}" class="py-2 d-block">Mudah Dipesan</a></li>
+                            <li><a href="{{ route('services') }}" class="py-2 d-block">Cepat Sampai</a></li>
+                            <li><a href="{{ route('services') }}" class="py-2 d-block">Kopi Berkualitas</a></li>
                         </ul>
                     </div>
                 </div>
